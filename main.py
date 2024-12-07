@@ -26,4 +26,5 @@ print(dadosNotas.query("filmeId == 2")["nota"].mean())   #media do segundo juman
 
 #pra não precisar fazer na mao usar a blibioteca groupby
 medias_filmes = dadosNotas.groupby("filmeId")["nota"].mean()
-print(medias_filmes.head())
+medias_filmes.plot(kind='hist')
+plt.show()
